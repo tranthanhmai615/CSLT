@@ -3,7 +3,7 @@
     public static void Main()
     {
         //Question01();
-        Question02();
+        //Question02();
         //Question03();
         Console.ReadKey();
     }
