@@ -1,43 +1,75 @@
-﻿public class Session04_01
+﻿namespace Tran_Thanh_Mai___31231022190___24C1INF50900503
 {
-    public static void Main()
+    internal class Session04_01
     {
-        do
+        public static void Main()
         {
-            //1.may nghi ngau nhien 1 so
-            Random rnd = new Random();
-            int comp_num = rnd.Next(0, 10) + 1;
-            //2. hoi nguoi dung doan so
-            //doan cho den chung nao dung thi thoi
-            int count = 0;
-            bool isContinue = true;
-            do
+            //Question01();
+            //Question02();
+            //Question03();
+            Console.ReadKey();
+        }
+        public static void Question01()
+        {
+            //Kiem tra so a la chan hay le
+            Console.Write("Nhap vao so a: ");
+            int a = int.Parse(Console.ReadLine());
+            if (a % 2 == 0)
             {
-                count++;
-                Console.Write("Ban doan so may? <1..10>");
-                int user_num = int.Parse(Console.ReadLine());
-                //3. kiem tra ket qua
-                if (user_num == comp_num)
-                {
-                    Console.WriteLine($"Ban doan trung sau {count} lan");
-                    isContinue = false;
-                }
-                else
-                {
-                    if (user_num > comp_num)
-                        Console.WriteLine("So ban doan lon hon so may nghi: ");
-                    else
-                        Console.WriteLine("So ban doan nho hon so may nghi: ");
-                }
-            } while (isContinue);
-            Console.WriteLine("==================================");
-            Console.Write("Choi nua khong? <C/K>: ");
-            string tl = Console.ReadLine();
-            if (tl.ToUpper().Equals("K"))
-            {
-                Console.WriteLine("Thang ma cho go. Lan sau khong choi nua!");
-                return;
+                Console.WriteLine($"{a} la so chan");
             }
-        } while (true);
+            else
+            {
+                Console.WriteLine($"{a} la so le");
+            }
+        }
+        public static void Question02()
+        {
+            //Tim so lon nhat trong 3 so
+            Console.Write("Nhap vao so a: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Nhap vao so b: ");
+            int b = int.Parse(Console.ReadLine());
+            Console.Write("Nhap vao so c: ");
+            int c = int.Parse(Console.ReadLine());
+            int Max = a;
+            if (b > Max)
+            {
+                Max = b;
+            }
+            if (c > Max)
+            {
+                c = Max;
+            }
+            Console.WriteLine($"So lon nhat la: {Max}");
+        }
+        public static void Question03()
+        {
+            //Tim goc phan tu
+            Console.Write("Nhap toa do mot diem: x =  ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("Nhap toa do mot diem: y =  ");
+            int y = int.Parse(Console.ReadLine());
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine("Toa do thuoc phan tu thu nhat la: ");
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine("Toa do thuoc phan tu thu hai la: ");
+            }
+            else if (x < 0 && y < 0)
+            {
+                Console.WriteLine("Toa do thuoc phan tu thu ba la: ");
+            }
+            else if (x > 0 && y < 0)
+            {
+                Console.WriteLine("Toa do thuoc phan tu thu tu la: ");
+            }
+            else if (x == 0 && y == 0)
+            {
+                Console.WriteLine("Goc toa do la: ");
+            }
+        }
     }
 }

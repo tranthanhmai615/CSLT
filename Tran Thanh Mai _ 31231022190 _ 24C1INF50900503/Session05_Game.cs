@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Trần_Thanh_Mai___31231022190___24C1INF50900503
+﻿namespace Tran_Thanh_Mai___31231022190___24C1INF50900503
 {
     /// <summary>
     /// Máy tính đỗ 3 con xúc sắc ngẫu nhiên
